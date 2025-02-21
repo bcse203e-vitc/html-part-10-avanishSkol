@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <script src="script2.js" defer></script> <!-- Link to the external JavaScript file -->
+</head>
+<body>
+    <h1>Pizza Order Form</h1>
+    <form id="pizzaForm">
+        <h2>Choose Your Pizza Size:</h2>
+        <label>
+            <input type="radio" name="size" value="Small" /> Small
+        </label><br>
+        <label>
+            <input type="radio" name="size" value="Medium" /> Medium
+        </label><br>
+        <label>
+            <input type="radio" name="size" value="Large" /> Large
+        </label><br><br>
+
+        <h2>Choose Toppings (Select multiple if you like):</h2>
+        <label>
+            <input type="checkbox" name="toppings" value="Cheese" /> Cheese
+        </label><br>
+        <label>
+            <input type="checkbox" name="toppings" value="Pepperoni" /> Pepperoni
+        </label><br>
+        <label>
+            <input type="checkbox" name="toppings" value="Mushrooms" /> Mushrooms
+        </label><br>
+        <label>
+            <input type="checkbox" name="toppings" value="Olives" /> Olives
+        </label><br>
+        <label>
+            <input type="checkbox" name="toppings" value="Bacon" /> Bacon
+        </label><br><br>
+
+        <button type="button" onclick="submitOrder()">Submit Order</button>
+    </form>
+
+    <h2>Your Order Summary:</h2>
+    <div id="orderSummary"></div>
+</body>
+</html>

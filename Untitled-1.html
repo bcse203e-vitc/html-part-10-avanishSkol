@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 50</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="message"></p>
+
+    <script>
+        // Random number between 1 and 50
+        const targetNumber = Math.floor(Math.random() * 50) + 1;
+        let guess;
+        let attempts = 0;
+
+        function checkGuess() {
+            guess = parseInt(document.getElementById("guessInput").value);
+            attempts++;
+
+            while (guess !== targetNumber) {
+                document.getElementById("message").innerText = "Wrong guess! Try again.";
+                return; // Exit the function to prevent continuous loops
+            }
+            document.getElementById("message").innerText = `Congratulations! You guessed it in ${attempts} attempts.`;
+        }
+    </script>
+</body>
+</html>

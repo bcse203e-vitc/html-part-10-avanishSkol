@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country-State Selection</title>
+    <script src="script8.js" defer></script> <!-- Link to the external JavaScript file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        .dropdown-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Country-State Dropdown</h1>
+
+    <div class="dropdown-container">
+        <label for="country">Select Country:</label>
+        <select id="country" onchange="updateStates()">
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+        </select>
+    </div>
+
+    <div class="dropdown-container">
+        <label for="state">Select State:</label>
+        <select id="state">
+            <option value="">Select a state</option>
+        </select>
+    </div>
+</body>
+</html>
